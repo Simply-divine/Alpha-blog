@@ -2,6 +2,8 @@
 
 <p> Title : <%= @article.title %> </p>
 <p>
-		Description: <%= @article.title %> 
+		Description: <%= @article.description %> 
 </p>
+<%= link_to 'edit current article',edit_article_path(@article) %> | 
+<%= link_to 'articles listings page',articles_path %>
 
