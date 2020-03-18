@@ -1,23 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Alpha_blog provides you the ability to create, read, update and delete articles. Checkout the website [here](https://alpha-blog-hardik-upadhyay.herokuapp.com/).
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
 
