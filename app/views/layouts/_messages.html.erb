@@ -1,7 +1,10 @@
 <div class = "messages">
 <ul>
 	<% flash.each do |name,msg| %>
-		<li> <%= msg %></li>
+		<div class = 'alert alert-<%="#{name}"%>'>
+			<a href = "#" class = "close" data-dismiss = "alert">&#215;</a>
+			<li> <%= msg %></li>
+		</div>
 	<% end %>
 </ul>
 </div>

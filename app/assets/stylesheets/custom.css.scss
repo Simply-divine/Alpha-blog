@@ -23,12 +23,20 @@ nav {
 .nav-link {
 	color: #fff !important;
 }
+.article-actions{
+	border-top: 1px solid #dbdbdb;
+	padding-top: 10px;
+}
 
 .center {
 	text-align: center;
 }
+.description{
+	margin-bottom: 30px;
+	// margin-top: 20px;
+}
 
-.jumbotron {
+.jumbo-background {
 	padding-top: 200px;
 	background-image: asset-url('background.png');
 	background-repeat: no-repeat;
@@ -38,7 +46,6 @@ nav {
 	flex: 1 1 auto;
 	 height: 700px
 }
-
 .jumbotron h1 {
 	color: #fff;
 	text-align: center;
@@ -46,7 +53,9 @@ nav {
 	letter-spacing: -1px;
 	font-weight: bold;
 }
-
+.jumbotron{
+	padding: 2rem;
+}
 .btn-primary {
 	background-color: #4F32EB;
 }

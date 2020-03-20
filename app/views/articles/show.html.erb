@@ -1,9 +1,23 @@
-<h1> Showing selected articles </h1>
+<h1 align="center">
+	<strong>
+		Title :
+		<%= @article.title %>
+		<strong></h1>
+		<div class="jumbotron col-sm-10 offset-1">
+			<div class ="description">
+			<h4 class="center">
+				<strong>Description:
+				</strong>
+			</h4>
+			<hr>
+			<%= @article.description %>
+			</div>
+			<div class="article-actions">
 
-<p> Title : <%= @article.title %> </p>
-<p>
-		Description: <%= @article.description %> 
-</p>
-<%= link_to 'edit current article',edit_article_path(@article) %> | 
-<%= link_to 'articles listings page',articles_path %>
+				<%= link_to 'edit current article',edit_article_path(@article),class: "btn btn-md btn-primary" %>
+				<%= link_to 'delete article', article_path(@article), class: "btn btn-md btn-danger", method: :delete,
+																					data: {confirm: 'Are you sure you want to delete the article?'}%>
+				<%= link_to 'View all articles', articles_path, class: "btn btn-md btn-success" %>
 
+			</div>
+		</div>
