@@ -13,6 +13,10 @@ nav {
 	background-color: #4F32EB !important;
 }
 
+.card {
+	margin-top: 30px !important;
+	border: 1px solid #cacaca;
+}
 .logo {
 	float: left;
 	font-size: 37px;
@@ -28,6 +32,9 @@ nav {
 	padding-top: 10px;
 }
 
+.btn{
+	margin: 5px;
+}
 .center {
 	text-align: center;
 }
@@ -44,7 +51,7 @@ nav {
 	background-attachment: fixed;
 	background-size: cover;
 	flex: 1 1 auto;
-	 height: 700px
+	 height: 800px;
 }
 .jumbotron h1 {
 	color: #fff;
@@ -53,13 +60,15 @@ nav {
 	letter-spacing: -1px;
 	font-weight: bold;
 }
-.jumbotron{
-	padding: 2rem;
+.card{
 }
 .btn-primary {
 	background-color: #4F32EB;
 }
-
+.btn-primary:hover{
+	background-color: #DCEDE9;
+	color: black;
+}
 #page-content {
 	flex: 1 0 auto;
 }

@@ -3,21 +3,20 @@
 		Title :
 		<%= @article.title %>
 		<strong></h1>
-		<div class="jumbotron col-sm-10 offset-1">
-			<div class ="description">
-			<h4 class="center">
-				<strong>Description:
-				</strong>
-			</h4>
-			<hr>
-			<%= @article.description %>
+		<div class="card">
+			<div class="card-header">
+				<h4><strong>Description:</strong></h4>
 			</div>
-			<div class="article-actions">
-
-				<%= link_to 'edit current article',edit_article_path(@article),class: "btn btn-md btn-primary" %>
-				<%= link_to 'delete article', article_path(@article), class: "btn btn-md btn-danger", method: :delete,
-																					data: {confirm: 'Are you sure you want to delete the article?'}%>
-				<%= link_to 'View all articles', articles_path, class: "btn btn-md btn-success" %>
-
+			<div class="card-body">
+				<%= @article.description %>
 			</div>
+			<div class="card-footer">
+				<!-- <div class="article-actions"> -->
+					<%= link_to 'edit current article',edit_article_path(@article),class: "btn btn-md btn-primary" %>
+					<%= link_to 'delete article', article_path(@article), class: "btn btn-md btn-danger", method: :delete, data: {confirm: 'Are you sure you want to delete the article?'}%>
+					<%= link_to 'View all articles', articles_path, class: "btn btn-md btn-success" %>
+
+				<!-- </div> -->
+			</div>
+
 		</div>
