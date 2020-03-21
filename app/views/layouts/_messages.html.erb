@@ -1,10 +1,8 @@
 <div class = "messages">
-<ul>
 	<% flash.each do |name,msg| %>
 		<div class = 'alert alert-<%="#{name}"%>'>
 			<a href = "#" class = "close" data-dismiss = "alert">&#215;</a>
-			<li> <%= msg %></li>
+			<%= msg %>
 		</div>
 	<% end %>
-</ul>
 </div>

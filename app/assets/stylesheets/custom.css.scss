@@ -8,7 +8,9 @@ html {
 nav {
 	flex: 0 1 auto;
 }
-
+.messages{
+	margin-bottom: 10px;
+}
 .navbar-custom {
 	background-color: #4F32EB !important;
 }
@@ -51,7 +53,7 @@ nav {
 	background-attachment: fixed;
 	background-size: cover;
 	flex: 1 1 auto;
-	 height: 800px;
+	 height: 1000px;
 }
 .jumbotron h1 {
 	color: #fff;
@@ -66,8 +68,7 @@ nav {
 	background-color: #4F32EB;
 }
 .btn-primary:hover{
-	background-color: #DCEDE9;
-	color: black;
+	background-color: #4B25DF;
 }
 #page-content {
 	flex: 1 0 auto;
