@@ -14,7 +14,14 @@ nav {
 .navbar-custom {
 	background-color: #4F32EB !important;
 }
-
+.article-user-specs{
+	float: right;
+	margin: 0px;
+	font-size: 10px;
+}
+.card-header{
+	margin:0;
+}
 .card {
 	margin-top: 30px !important;
 	border: 1px solid #cacaca;
@@ -47,16 +54,9 @@ nav {
 
 .jumbo-background {
 	padding-top: 200px;
-	background-image: asset-url('background.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
-	flex: 1 1 auto;
-	 height: 1000px;
+	 height: 600px;
 }
 .jumbotron h1 {
-	color: #fff;
 	text-align: center;
 	margin-bottom: 30px;
 	letter-spacing: -1px;
@@ -81,7 +81,7 @@ nav {
 .sticky-footer {
 	margin-top: 45px;
 	padding-top: 5px;
-	border: 1px solid #eaeaea;
+	border-top: 1px solid #eaeaea;
 	color: #777;
 	flex: 0 1 auto;
 }
