@@ -1,0 +1,34 @@
+<%= render 'shared/errors', obj: @user %>
+<div class="col-md-6 mx-auto text-center">
+	<div class="header-title">
+		<h1 class="wv-heading--title">
+			Alpha Blog — it’s free!
+		</h1>
+		<h2 class="wv-heading--subtitle">
+			Join us to follow millions of splendid articles
+		</h2>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 mx-auto">
+			<%= form_for(@user, :html => {class: "myform form",role: "form"}) do |f| %>
+				<div class="form-group">
+					<%= f.text_field :username,class: "form-control my-input", placeholder: "Name" %>
+				</div>
+				<div class="form-group">
+					<%= f.email_field :email,class: "form-control my-input", placeholder: "Email" %>
+				</div>
+				<div class="form-group">
+					<%= f.password_field :password,class: "form-control my-input", placeholder: "Password" %>
+				</div>
+				<div class="text-center ">
+					<%= f.submit(@user.new_record? ? "Your Free Account" : "Update your account", class: " btn btn-block send-button tx-tfm") %>
+				</div>
+				<p class="small mt-3">By signing up, you are indicating that you have read and agree to the <a href="#" class="ps-hero__content__link">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+				</p>
+			<% end%>
+		</div>
+	</div>
+</div>

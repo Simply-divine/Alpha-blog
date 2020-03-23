@@ -1,0 +1,4 @@
+<h1 align = "center"> Welcome <%= @user.username %></h1>
+
+<h4 align = "center"> Your articles </h4>
+<%= render 'articles/article',obj: @user.articles %>
