@@ -1,4 +1,21 @@
-<h1 align = "center"> Welcome <%= @user.username %></h1>
-
-<h4 align = "center"> Your articles </h4>
+<div class="card mb-3 offset-2" style="max-width: 540px;">
+  <div class="row no-gutters ">
+    <div class="col-md-4">
+			<%= gravatar_for(@user,size: 190) %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body my-auto align-items-center">
+				<h1 class="card-title center justify-content-center" ><%= @user.username %></h1>
+				<p class="card-text  center justify-content-center"><small class = "text-muted">Contact <%= @user.username %>:</small>
+				<small class = "text-muted"><%= @user.email %></small></p>
+				<p class = "card-text center"><small class = "text-muted">User since <%= time_ago_in_words @user.created_at %> ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class = "gravatar">
+</div>
+<div class = "articles">
+	<h3 class = "offset-2" > <%= @user.username %>'s articles </h4>
+</div>
 <%= render 'articles/article',obj: @user.articles %>

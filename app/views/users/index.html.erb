@@ -1,0 +1,19 @@
+<h1 align = "center">All Alpha Bloggers </h1>
+<% @users.each do |user| %>
+<div class="card mb-3 offset-3" style="max-width: 540px;">
+  <div class="row no-gutters ">
+    <div class="col-md-4">
+			<%= link_to gravatar_for(user,size: 190),user_path(user) %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body my-auto align-items-center">
+				<h1 class="card-title center justify-content-center" ><%= user.username %></h1>
+				<p class="card-text  center justify-content-center"><small class = "text-muted">Contact <%= user.username %>:</small>
+				<small class = "text-muted"><%= user.email %></small></p>
+				<p class = "card-text center"><small class = "text-muted"> User has <%= pluralize(user.articles.count,"article") %></small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% end %>
