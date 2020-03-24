@@ -19,6 +19,9 @@ nav {
 .navbar-custom {
 	background-color: #4F32EB !important;
 }
+.paginate{
+	margin: 20px;
+}
 .article-user-specs{
 	float: right;
 	margin: 0px;
@@ -34,7 +37,7 @@ nav {
 .logo {
 	float: left;
 	font-size: 37px;
-	text-transform: uppercase;
+	:text-transform: uppercase;
 	color: #fff !important;
 }
 
@@ -58,12 +61,14 @@ nav {
 }
 
 .jumbo-background {
-	padding-top: 200px;
-	 height: 600px;
+	background-image: url('background.jpg'); 
+	background-size: cover;
+ background-repeat: no-repeat;	
+	 height: 700px;
 }
 .jumbotron h1 {
-	text-align: center;
-	margin-bottom: 30px;
+	color:#fff;
+	margin-bottom: 150px;
 	letter-spacing: -1px;
 	font-weight: bold;
 }

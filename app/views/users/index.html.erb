@@ -1,4 +1,7 @@
 <h1 align = "center">All Alpha Bloggers </h1>
+<div class = "container pagination justify-content-center">
+<%= will_paginate @users %>
+</div>
 <% @users.each do |user| %>
 <div class="card mb-3 offset-3" style="max-width: 540px;">
   <div class="row no-gutters ">
@@ -15,5 +18,7 @@
     </div>
   </div>
 </div>
-
 <% end %>
+<div class = "container pagination justify-content-center">
+<%= will_paginate @users %>
+</div>

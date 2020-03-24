@@ -18,4 +18,11 @@
 <div class = "articles">
 	<h3 class = "offset-2" > <%= @user.username %>'s articles </h4>
 </div>
+<div class = " container pagination justify-content-center">
+	<%= will_paginate @user_articles %>
+</div>
 <%= render 'articles/article',obj: @user.articles %>
+<div class = " container pagination justify-content-center">
+	<%= will_paginate @user_articles %>
+</div>
+</div>
