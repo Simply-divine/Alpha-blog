@@ -30,9 +30,8 @@
 		<%= @article.description %>
 	</div>
 	<div class="card-footer">
-		<!-- <div class="article-actions"> -->
-		<%= link_to 'edit current article',edit_article_path(@article),class: "btn btn-md btn-primary" %>
-		<%= link_to 'delete article', article_path(@article), class: "btn btn-md btn-danger", method: :delete, data: {confirm: 'Are you sure you want to delete the article?'}%>
+		<%= link_to 'edit current article',edit_article_path(@article),class: "btn btn-md btn-primary" if logged_in? && current_user == @article.user %>
+		<%= link_to 'delete article', article_path(@article), class: "btn btn-md btn-danger", method: :delete, data: {confirm: 'Are you sure you want to delete the article?'} if logged_in? && current_user == @article.user %>
 		<%= link_to 'View all articles', articles_path, class: "btn btn-md btn-success" %>
 		<!-- </div> -->
 	</div>

@@ -1,12 +1,15 @@
 class UsersController < ApplicationController
-
+	before_action :set_user, only: [:show, :edit, :update]
+	before_action :require_user, except: [:show, :index]
+	before_action :require_same_user, only: [:edit, :update, :destroy]
 	def new
 		@user = User.new	
 	end
 
 	def show
-		@user = User.find(params[:id])
-		@user_articles = @user.articles.paginate(page: params[:page],per_page: 5)
+		@user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
+		@articles = Article.paginate(page: params[:page], per_page: 5)
+
 	end
 
 	def create
@@ -25,11 +28,10 @@ class UsersController < ApplicationController
 	end
 
 	def edit
-		@user = User.find(params[:id])
+		
 	end
 
 	def update
-		@user = User.find(params[:id])
 		if @user.update(user_params)
 			##update successfull
 			flash[:success] = "User updated successfully"
@@ -42,6 +44,15 @@ class UsersController < ApplicationController
 	private
 		def user_params
 			params.require(:user).permit(:username,:password,:email)
-	end
+		end
+		def set_user
+			@user = User.find(params[:id])
+		end
+		def require_same_user 
+			if current_user != @user
+				flash[:danger] = "You cannot edit any other person's accounts! "
+				redirect_to users_path
+			end
+		end
 
 end
