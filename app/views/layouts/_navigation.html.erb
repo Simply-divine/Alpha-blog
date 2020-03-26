@@ -19,7 +19,7 @@
         <ul class = "navbar-nav mr-auto">
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Actions
+          Your Profile <%="admin" if current_user.admin?%>
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <%= link_to 'Create Article', new_article_path , class: 'dropdown-item'%>
@@ -34,6 +34,7 @@
       <% else %>
         <%= link_to 'Log In', login_path,class: "nav-link"%>
         <%= link_to 'Sign up', signup_path,class: "nav-link"%>
+        
       <% end %>
     </form>
   </div>

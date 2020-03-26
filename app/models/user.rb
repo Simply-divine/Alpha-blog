@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-	has_many :articles
+	has_many :articles, dependent: :destroy
 	before_save {self.email = email.downcase}
 	validates :username, presence:true, uniqueness: {case_sensitive: false}, length: {minimum: 3, maximum: 10} 
 	VALID_EMAIL_REGEX= /\A[\w+\-.]+@[\w+\-.]+\.[a-z]+\z/i
